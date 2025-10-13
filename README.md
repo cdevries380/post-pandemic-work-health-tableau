@@ -1,7 +1,6 @@
 # Post-Pandemic Work Health (Tableau Project)
 
-This project explores the relationship between work arrangements (**remote**, **hybrid**, **onsite**) and employee well-being using survey data.
-
+This project explores how work arrangement (Remote, Hybrid, On-site) impacts people's health outcomes. Having data on specific industries, specific conditions, countries etc allows me to look at how different groups experience post-pandemic work differently — whether certain sectors face higher burnout, or if some regions report better work-life balance than others. Overall, it’s a chance to explore how the shift in work culture has shaped people’s health and daily lives. Hope you enjoy this analysis.
 ---
 
 ## 🧠 Key Questions
