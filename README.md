@@ -40,7 +40,7 @@ After establishing a baseline understanding of social isolation, I wanted to loo
 
 For this analysis, I created a **calculated field** to convert burnout levels (**Low, Medium, High**) into a numerical scale, allowing me to compute average burnout scores across work arrangements. With this, I built a **bar chart comparing average burnout levels** between **Remote**, **Hybrid**, and **On-site** workers.
 
-Interestingly, while remote workers showed the highest levels of social isolation in the first visualization, **on-site workers actually displayed the highest average burnout levels** in this one. This opens up a more nuanced conversation — perhaps on-site roles come with more rigid structures, commute stress, or managerial oversight that contribute to burnout differently than isolation does for remote workers.
+Interestingly, while remote workers showed the highest levels of social isolation in the first visualization, **on-site workers actually displayed the highest average burnout levels** in this one.
 
 *(Insert further analysis here that tells a more in-depth story on the data — for example, how other variables like job satisfaction or hours worked might interact with these findings.)*
 
