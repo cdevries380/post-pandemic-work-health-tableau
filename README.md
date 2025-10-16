@@ -27,7 +27,7 @@ The dataset was mostly clean, but I conducted a thorough inspection to confirm d
 
 ## 📊 First Analysis: Social Isolation Score by Work Arrangement
 
-To begin exploring mental health outcomes, I ran a basic visualization in Tableau Public to examine the **average Social Isolation Score** for each work arrangement across the full dataset, without focusing on any specific industry. This approach provides a broad overview of trends and serves as a starting point for deeper analysis. The visualization shows that, overall, **remote workers report the highest average social isolation scores**, followed by hybrid workers, with onsite workers showing the lowest scores. This result aligns with intuitive expectations: on average, remote work can lead to higher feelings of social isolation. While many additional variables could affect mental health outcomes, this simple overview demonstrates a clear trend and highlights the value of interactive data visualization in understanding workforce well-being.
+To begin exploring mental health outcomes, I ran a basic visualization in Tableau Public to examine the **average Social Isolation Score** for each work arrangement across the full dataset, without focusing on any specific industry. This approach provides a broad overview of trends and serves as a starting point for deeper analysis. The visualization shows that, overall, **remote workers report the highest average social isolation scores**, followed by hybrid workers, with onsite workers showing the lowest scores. This result aligns with intuitive expectations: on average, remote work can lead to higher feelings of social isolation. 
 
 **Interactive Viz:**  
 [INSERT TABLEAU PUBLIC LINK HERE]
