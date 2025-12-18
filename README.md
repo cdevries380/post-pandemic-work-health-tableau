@@ -1,66 +1,76 @@
-# Post-Pandemic Work Health (Tableau Project)
+Employee Burnout and Social Isolation Analysis by Work Arrangement
+Ask
 
-This project explores how work arrangement (**Remote, Hybrid, On-site**) impacts people's health outcomes. Having data on specific industries, specific conditions, countries etc allows me to look at how different groups experience post-pandemic work differently — whether certain sectors face higher burnout, or if some regions report better work-life balance than others. Overall, it’s a chance to explore how the shift in work culture has shaped people’s health and daily lives. Hope you enjoy this analysis.
+The goal of this project is to understand how burnout levels and social isolation scores vary by work arrangement (remote, hybrid, on-site).
 
----
+This project focuses on two contrasting contexts:
 
-## 🧠 Key Questions
+Remote-friendly context: Technical / Specialist roles in Technology and Professional Services
 
-1. How do mental health outcomes differ across work arrangements?  
-2. What is the relationship between work-life balance, burnout, and hours worked?  
-3. How do demographic and salary differences shape health impacts?
+On-site-friendly context: Customer-Facing / Support roles in Healthcare and Retail
 
----
+The purpose of the experiments is to determine whether remote workers consistently experience higher burnout and isolation, and how industry and role type influence these outcomes.
 
-## 🧹 Data Cleaning & Preparation
+Prepare
 
-The dataset was mostly clean, but I conducted a thorough inspection to confirm data quality and consistency before analysis. I checked for missing values using filters and conditional formulas, verified categorical consistency to ensure **“Remote,” “Hybrid,” and “Onsite”** were entered uniformly, tested for extra spaces or hidden characters using the `TRIM()` and `CLEAN()` functions, confirmed data types for numerical and date fields to support accurate analysis in Tableau, and reviewed duplicates to ensure each record represented a unique response. Overall, the dataset required minimal cleaning, with only light formatting adjustments before visualization.
+The dataset contains survey responses with demographics, industry, job role, work arrangement, burnout level (Low / Medium / High), and social isolation score.
 
----
+Key preparation steps included:
 
-## 🧰 Tools Used
+Grouped job roles into four categories: Technical / Specialist, Customer-Facing / Support, Marketing / Content, and Management / Leadership. Grouping reduced complexity and highlighted meaningful differences between types of work.
 
-- **Google Sheets** — for data inspection and light cleaning  
-- **Tableau** — for data visualization and analysis  
+Selected relevant industries for each experiment to isolate contexts where remote or on-site work is naturally more suitable.
 
----
+Calculated burnout percentages per category instead of averages, because averages masked the distribution of low, medium, and high burnout responses.
 
-## 📊 First Analysis: Social Isolation Score by Work Arrangement
+Process
 
-To begin exploring mental health outcomes, I ran a basic visualization in Tableau Public to examine the **average Social Isolation Score** for each work arrangement across the full dataset, without focusing on any specific industry. This approach provides a broad overview of trends and serves as a starting point for deeper analysis. The visualization shows that, overall, **remote workers report the highest average social isolation scores**, followed by hybrid workers, with onsite workers showing the lowest scores. This result aligns with intuitive expectations: on average, remote work can lead to higher feelings of social isolation. 
+Before isolating specific industries or job roles, the dataset was visualized as a whole to observe general trends:
 
-**Interactive Viz:**  
-https://public.tableau.com/app/profile/collin.devries/viz/MentalHealthOutcomesbyWorkArrangements/Sheet1
+Burnout: Remote workers generally reported higher high-burnout percentages than hybrid or on-site workers. On-site workers consistently had the highest proportion of low-burnout responses.
 
----
+Social Isolation: Remote workers had the highest average scores, hybrid workers were intermediate, and on-site workers had the lowest scores.
 
-## 🔥 Second Analysis: Burnout Levels by Work Arrangement
+These baseline observations motivated the experiments, which compared two contrasting contexts to see if the pattern holds across different types of work.
 
-After establishing a baseline understanding of social isolation, I wanted to look deeper into how **burnout** compares across the same work arrangements. I thought it would be important to look at a few key factors — namely **social isolation score** and **burnout level** — and how they each relate to work arrangement. I could’ve done this analysis in either Google Sheets or Tableau, but I chose **Tableau** because I like the presentation and the flexibility to create calculated fields directly in the platform using code, instead of generating new columns manually and re-uploading data.
+Filters:
 
-For this analysis, I created a **calculated field** to convert burnout levels (**Low, Medium, High**) into a numerical scale, allowing me to compute average burnout scores across work arrangements. With this, I built a **bar chart comparing average burnout levels** between **Remote**, **Hybrid**, and **On-site** workers.
+Industry filter: to select relevant industries for each experiment.
 
-Interestingly, while remote workers showed the highest levels of social isolation in the first visualization, **on-site workers actually displayed the highest average burnout levels** in this one.
+Job Role filter: four grouped categories to simplify analysis and focus on meaningful patterns.
 
-**Interactive Viz:**
-https://public.tableau.com/app/profile/collin.devries/viz/BurnoutLevelsbyWorkArrangement/Sheet1
+Experiment 1 — Technical / Specialist in Technology + Professional Services
 
+Remote workers had the highest high-burnout percentages, hybrid moderate, on-site lowest.
 
-*(Insert further analysis here that tells a more in-depth story on the data — for example, how other variables like job satisfaction or hours worked might interact with these findings.)*
+Social isolation followed the same pattern: remote highest, hybrid middle, on-site lowest.
 
----
+Experiment 2 — Customer-Facing / Support in Healthcare + Retail
 
-## 🧩 Technical Notes
+Remote workers again had the highest high-burnout percentages, hybrid moderate, on-site lowest. On-site workers had a larger proportion reporting low burnout than in Experiment 1.
 
-- Used **Tableau Public** for visualization and field calculations  
-- Created a **calculated field** to transform categorical burnout levels into numeric scores for averaging  
-- Maintained consistent **color schemes** across visualizations for clear comparison  
-- Followed **best practices** for labeling, axis clarity, and layout to ensure visual storytelling quality suitable for portfolio presentation  
+Social isolation followed the same gradient: remote highest, hybrid middle, on-site lowest.
 
----
+Analyze
 
-## 🔮 Next Steps / Future Analysis *(optional placeholder)*
+Across both experiments, a consistent pattern emerged: remote workers experience the highest burnout and social isolation, hybrid workers are moderate, and on-site workers report the lowest levels.
 
-- Explore relationships between **hours worked** and both **burnout** and **social isolation**  
-- Examine **industry-specific trends** to identify sectors with higher risk factors  
-- Create a **dashboard** combining multiple visualizations for a portfolio-ready interactive view  
+Remote-friendly context: Remote workers in Technical / Specialist roles within Technology and Professional Services still experienced elevated burnout and isolation.
+
+On-site-friendly context: On-site workers in Customer-Facing / Support roles within Healthcare and Retail had a higher proportion of low-burnout responses.
+
+These experiments demonstrate that while remote work generally increases burnout and isolation, the severity is influenced by role type and industry.
+
+Using percentages for burnout rather than averages was critical to accurately capture the distribution of experiences.
+
+The baseline trends observed in the whole dataset were reflected in both experiments, confirming that the remote > hybrid > on-site gradient is robust across contexts.
+
+Share / Act
+
+Offer hybrid work options to reduce burnout and isolation for remote employees.
+
+Provide structured social support and check-ins for remote workers, especially in technical roles.
+
+Monitor high-contact on-site roles to ensure employee wellbeing is maintained.
+
+The dashboard visualizes burnout percentages and social isolation scores by work arrangement, helping stakeholders identify at-risk groups and implement interventions.
