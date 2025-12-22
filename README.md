@@ -1,6 +1,6 @@
-# Remote Work, Burnout, and Social Isolation
+# Tableau Analysis of Employee Burnout and Social Isolation Trends
 
-**Tableau Analysis Project**
+
 
 ---
 
