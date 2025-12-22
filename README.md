@@ -1,59 +1,137 @@
-# Employee Burnout and Social Isolation Analysis by Work Arrangement
+# Remote Work, Burnout, and Social Isolation
+
+**Tableau Analysis Project**
+
+In this project, I take on the role of a data analyst at a company tasked with identifying trends in employee wellbeing. The goal is to analyze survey data to uncover patterns in burnout and social isolation across different work arrangements, helping leadership understand potential areas of concern and opportunities to improve employee experience.
+
+---
 
 ## Ask
-The goal of this project is to understand how **burnout levels** and **social isolation scores** vary by **work arrangement** (remote, hybrid, on-site).
 
-This project focuses on two contrasting contexts:  
-1. **Remote-friendly context:** Technical / Specialist roles in Technology and Professional Services  
-2. **On-site-friendly context:** Customer-Facing / Support roles in Healthcare and Retail  
+This project explores how work arrangement (remote, hybrid, on-site) relates to employee burnout and social isolation.
 
-The purpose of the experiments is to determine whether remote workers consistently experience higher burnout and isolation, and how **industry** and **role type** influence these outcomes.
+Intuitively, remote work is often assumed to reduce burnout because it removes commuting, increases flexibility, and allows for greater autonomy. At the same time, remote work is expected to increase social isolation due to reduced in-person interaction.
+
+The central question of this analysis is:
+
+- How do burnout levels and social isolation differ across remote, hybrid, and on-site workers?
+- Does the relationship change when isolating specific industries and job role types?
+
+Rather than assuming outcomes, this project uses exploratory analysis and targeted comparisons to understand what the data actually shows.
 
 ---
 
 ## Prepare
-The dataset contains survey responses with demographics, industry, job role, work arrangement, burnout level (Low / Medium / High), and social isolation score.
 
-Key preparation steps included:  
-- **Grouped job roles** into four categories: Technical / Specialist, Customer-Facing / Support, Marketing / Content, and Management / Leadership. Grouping reduced complexity and highlighted meaningful differences between types of work.  
-- **Selected relevant industries** for each experiment to isolate contexts where remote or on-site work is naturally more suitable.  
-- Calculated **burnout percentages per category** instead of averages, because averages masked the distribution of low, medium, and high burnout responses.
+The dataset consists of employee survey responses with the following relevant fields:
+
+- Work_Arrangement  
+- Burnout_Level  
+- Social_Isolation_Score  
+- Industry  
+- Job_Role  
+- Gender  
+- Region  
+
+The data was imported into Tableau Public and reviewed for completeness and consistency. Burnout was captured as a categorical variable (Low / Medium / High), while social isolation was measured using a numeric score.
 
 ---
 
 ## Process
-Before isolating specific industries or job roles, the dataset was visualized **as a whole** to observe general trends:  
-- **Burnout:** Remote workers generally reported higher high-burnout percentages than hybrid or on-site workers. On-site workers consistently had the highest proportion of low-burnout responses.  
-- **Social Isolation:** Remote workers had the highest average scores, hybrid workers were intermediate, and on-site workers had the lowest scores.
 
-These baseline observations motivated the experiments, which compared **two contrasting contexts** to see if the pattern holds across different types of work.
+Two key methodological decisions shaped this project:
 
-**Filters:**  
-- **Industry filter:** to select relevant industries for each experiment.  
-- **Job Role filter:** four grouped categories to simplify analysis and focus on meaningful patterns.
+### 1. Measuring burnout using percentages, not averages
+An early challenge was determining how to visualize burnout correctly. Because burnout is categorical, averaging it into a single score produced misleading results. Instead, burnout was analyzed as the percentage distribution of Low, Medium, and High responses within each group. This better reflects how burnout is actually experienced across workers.
 
-**Experiment 1 — Technical / Specialist in Technology + Professional Services**  
-- Remote workers had the highest high-burnout percentages, hybrid moderate, on-site lowest.  
-- Social isolation followed the same pattern: remote highest, hybrid middle, on-site lowest.
+### 2. Limiting filters to avoid over-fragmentation
+To keep the analysis focused and interpretable, only two filters were used:
 
-**Experiment 2 — Customer-Facing / Support in Healthcare + Retail**  
-- Remote workers again had the highest high-burnout percentages, hybrid moderate, on-site lowest. On-site workers had a larger proportion reporting low burnout than in Experiment 1.  
-- Social isolation followed the same gradient: remote highest, hybrid middle, on-site lowest.
+- **Industry** (kept as provided in the dataset)  
+- **Job Role (Grouped)**
+
+Individual job roles were grouped into four broader categories to reduce noise and improve analytical clarity:
+
+- Technical / Specialist  
+- Customer-Facing / Support  
+- Management / Leadership  
+- Marketing / Content  
+
+This allowed for meaningful comparisons without creating overly granular slices of data that would be difficult to interpret.
 
 ---
 
 ## Analyze
-- Across both experiments, a consistent pattern emerged: **remote workers experience the highest burnout and social isolation, hybrid workers are moderate, and on-site workers report the lowest levels**.  
-- **Remote-friendly context:** Remote workers in Technical / Specialist roles within Technology and Professional Services still experienced elevated burnout and isolation.  
-- **On-site-friendly context:** On-site workers in Customer-Facing / Support roles within Healthcare and Retail had a higher proportion of low-burnout responses.  
-- These experiments demonstrate that while **remote work generally increases burnout and isolation**, the severity is influenced by **role type and industry**.  
-- Using **percentages for burnout** rather than averages was critical to accurately capture the distribution of experiences.  
-- The **baseline trends** observed in the whole dataset were reflected in both experiments, confirming that the **remote > hybrid > on-site gradient** is robust across contexts.
+
+### Overall pattern (no filters applied)
+
+Before isolating any industries or job roles, a clear and consistent pattern emerged across the full dataset:
+
+**Burnout**  
+- Remote workers report the highest levels of burnout  
+- Hybrid workers fall in the middle  
+- On-site workers report the lowest burnout  
+
+This result is surprising given the common assumption that remote work should reduce burnout by eliminating commutes and increasing flexibility.
+
+**Social Isolation**  
+- Remote workers report the highest social isolation scores  
+- Hybrid workers report moderate isolation  
+- On-site workers report the lowest isolation  
+
+Unlike burnout, the social isolation result aligns closely with intuitive expectations.
+
+### Targeted experiments
+
+**Experiment 1: Roles and industries well-suited for remote work**  
+Industries and job role groups typically considered remote-friendly were isolated (e.g., technology-focused industries and technical/specialist roles).
+
+Even in this context:
+
+- Remote workers still showed a higher proportion of high burnout compared to hybrid and on-site workers  
+- Social isolation remained highest among remote workers
+
+**Experiment 2: Roles and industries better suited for on-site work**  
+Customer-facing roles in industries such as healthcare and retail were isolated to represent work that benefits from in-person interaction.
+
+In this scenario:
+
+- On-site workers showed the highest proportion of low burnout  
+- Remote workers again reported the highest burnout and social isolation
+
+---
+
+### Key insight
+
+Across both experiments and the overall dataset, the pattern remained consistent:
+
+- Remote work is associated with higher burnout, not lower  
+- Hybrid work tends to moderate both burnout and isolation  
+- On-site work shows the lowest burnout and social isolation  
+
+This suggests that flexibility alone does not necessarily protect against burnout, and that reduced social connection may play a larger role than expected.
 
 ---
 
 ## Share / Act
-- Offer **hybrid work options** to reduce burnout and isolation for remote employees.  
-- Provide **structured social support and check-ins** for remote workers, especially in technical roles.  
-- Monitor high-contact on-site roles to ensure employee wellbeing is maintained.  
-- The dashboard visualizes **burnout percentages and social isolation scores by work arrangement**, helping stakeholders identify at-risk groups and implement interventions.
+
+These findings challenge common assumptions about remote work and highlight important trade-offs:
+
+- Organizations should not assume remote work automatically reduces burnout  
+- Hybrid arrangements may offer a balance between flexibility and social connection  
+- Remote roles may require intentional interventions to address isolation and workload boundaries
+
+Future analysis could explore:
+
+- The role of hours worked in mediating burnout  
+- Differences by career stage or tenure  
+- Longitudinal trends over time
+
+---
+
+## Tools Used
+
+- Tableau Public  
+- Survey dataset (self-reported employee responses)  
+
+[Link to interactive Tableau dashboard]
