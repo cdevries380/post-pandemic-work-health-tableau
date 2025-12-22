@@ -17,8 +17,6 @@ The central question of this analysis is:
 - How do burnout levels and social isolation differ across remote, hybrid, and on-site workers?  
 - Does the relationship change when isolating specific industries and job role types?  
 
-Rather than assuming outcomes, this project uses exploratory analysis and targeted comparisons to understand what the data actually shows.
-
 ---
 
 ## Prepare
