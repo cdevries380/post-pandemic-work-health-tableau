@@ -2,11 +2,11 @@
 
 **Tableau Analysis Project**
 
-In this project, I take on the role of a data analyst at a company tasked with identifying trends in employee wellbeing. The goal is to analyze survey data to uncover patterns in burnout and social isolation across different work arrangements, helping leadership understand potential areas of concern and opportunities to improve employee experience.
-
 ---
 
 ## Ask
+
+In this project, I take on the role of a **data analyst at a company** tasked with identifying trends in employee wellbeing. The goal is to analyze survey data to uncover patterns in **burnout** and **social isolation** across different work arrangements, helping leadership understand potential areas of concern and opportunities to improve employee experience.
 
 This project explores how work arrangement (remote, hybrid, on-site) relates to employee burnout and social isolation.
 
@@ -14,8 +14,8 @@ Intuitively, remote work is often assumed to reduce burnout because it removes c
 
 The central question of this analysis is:
 
-- How do burnout levels and social isolation differ across remote, hybrid, and on-site workers?
-- Does the relationship change when isolating specific industries and job role types?
+- How do burnout levels and social isolation differ across remote, hybrid, and on-site workers?  
+- Does the relationship change when isolating specific industries and job role types?  
 
 Rather than assuming outcomes, this project uses exploratory analysis and targeted comparisons to understand what the data actually shows.
 
