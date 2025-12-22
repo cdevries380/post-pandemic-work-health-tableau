@@ -132,4 +132,4 @@ Future analysis could explore:
 - Tableau Public  
 - Survey dataset (self-reported employee responses)  
 
-[Link to interactive Tableau dashboard]
+[View on Tableau Public](https://public.tableau.com/app/profile/collin.devries/viz/BurnoutLevelsbyWorkArrangement/Dashboard1)
